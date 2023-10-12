@@ -4,6 +4,9 @@ import AuthLayout from './layouts/AuthLayout'
 import Inicio from './views/Inicio'
 import Login from './views/Login'
 import Registro from './views/Registro'
+import AdminDashboard from './views/AdminDashboard'
+import LayoutAdmin from './layouts/LayoutAdmin'
+import AdminMembers from './views/AdminMembers'
 
 const router = createBrowserRouter([
     {
@@ -29,7 +32,24 @@ const router = createBrowserRouter([
                 element: <Registro />
             }
         ]
+    },
+    {
+        path: '/admin',
+        element: <LayoutAdmin/>,
+        children:[
+            {
+                path: '/admin/AdminDashboard',
+                element: <AdminDashboard />
+            },
+            {
+                path: '/admin/AdminMembers',
+                element: <AdminMembers />
+            },
+            
+        ]
     }
+
+    //ESTA MADRE ES DE LAS VENTANAS, LAS RUTAS 
 ])
 
 export default router
