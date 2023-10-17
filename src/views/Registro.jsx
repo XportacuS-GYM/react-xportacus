@@ -9,6 +9,8 @@ export default function Registro() {
     const passwordRef = createRef();
     const passwordConfirmationRef = createRef();
 
+    const [errores, setErrores] = ({});
+
     const handleSubmit = async e => {
         e.preventDefault();
 
@@ -19,10 +21,10 @@ export default function Registro() {
             password_confirmation : passwordConfirmationRef.current.value
         }
         try {
-            const respuesta = await clienteAxios.post('http://localhost/api/registro', datos);
+            const respuesta = await clienteAxios.post('/api/registro', datos);
             console.log(respuesta);
         } catch (error) {
-            console.log(error);
+            setErrores(Object.values(error.response.data.errors))
         }
 
     }
