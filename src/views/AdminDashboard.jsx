@@ -7,7 +7,7 @@ export default function AdminDashboard() {
 
         <div className="w-[968px] h-[196px] pt-[10px] rounded-[2em] ml-[50px] bg-white">
           <p className="text-[1.5em] pl-[2em]">Escanear tu pase</p>
-          {/* Como poner el codigo de barras*/}
+          {/* Como poner el codigo de barras prueba */}
         </div>
         
         <div className="w-[968px] h-[812px] ml-[50px] mt-[50px] rounded-[2em] bg-white">

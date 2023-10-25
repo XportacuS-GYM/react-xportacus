@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 const data = [
   {
     nombre: 'Juan segoviano',
@@ -8,6 +10,10 @@ const data = [
     estatus: 'Activa',
   },
 ];
+
+const usariosPorPagina = 10;
+
+
 
 export default function AdminMembers() {
   return (
