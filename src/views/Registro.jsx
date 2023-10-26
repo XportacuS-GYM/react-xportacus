@@ -12,7 +12,7 @@ export default function Registro() {
     const passwordConfirmationRef = createRef();
 
     const [errores, setErrores] = ({});
-
+    
     const handleSubmit = async e => {
         e.preventDefault();
 
@@ -43,7 +43,7 @@ export default function Registro() {
             <form onSubmit={handleSubmit} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
 
                 {errores ? errores.map((error, i) => <Alerta key={i}>{error}</Alerta>) :null}
-
+                 
                 <div className="mb-4 flex flex-col gap-6">
                     
                     <div className="relative h-11 w-full min-w-[200px]">
