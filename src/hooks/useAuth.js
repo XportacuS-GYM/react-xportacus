@@ -38,12 +38,12 @@ export const useAuth = ({middleware, url}) => {
             setErrores([])
             await mutate()
         } catch (error) {
+            console.log(error.response)
             setErrores(Object.values(error.response.data.errors));
         }
     }
 
     const logout = async () => {
-        console.log('click')
         try {
             await clienteAxios.post('/api/logout', null, {
                 headers: {
