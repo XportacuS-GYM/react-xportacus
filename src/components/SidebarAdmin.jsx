@@ -1,13 +1,13 @@
 export default function SidebarAdmin() {
   return (
     <>
-    <div className= "ps-[20px] w-[306px] h-[1198px] bg-white shadow grid grid-cols-1">
+    <div className= "ps-[20px] w-[306px] h-[1120px] bg-white shadow grid grid-cols-1">
         <ul className="text-slate-400 items-center justify-start p-[20px] ">
             
             <h1 className="flex items-center pb-[40px] ">
               <img src='../img/xportacus_logo.png' alt="" className="w-[60px] h-[37px]" /> 
               <span className="text-black font-bold text-[24px]">Panel de <br /> acceso </span> 
-              <p>v0.1</p>
+              <p>v0.2</p>
             </h1>
                    
             <a href="/admin/AdminDashboard">
