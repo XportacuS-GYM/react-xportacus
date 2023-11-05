@@ -1,8 +1,20 @@
 import React from 'react'
 
+import { productos } from '../data';
+import ProductoSlider from '../components/ProductoSlider';
+
 const Shop = () => {
+    const { title, subtitle } = productos;
     return (
-        <div className='h-[483px]'>Shop</div>
+        <section className='section text-center'>
+            <div className="container mx-auto ">
+                <div>
+                    <h2 className='title font-primary'>{title}</h2>
+                    <p className='max-w-[630px] mx-auto mb-[50px] lg:mb-[70px]'>{subtitle}</p>
+                </div>
+                <ProductoSlider />
+            </div>
+        </section>
     )
 }
 
