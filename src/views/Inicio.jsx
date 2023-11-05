@@ -1,4 +1,3 @@
-
 import Hero from '../components/Hero';
 import Rutinas from '../components/Rutinas';
 import Membresia from '../components/Membresia';
@@ -14,9 +13,11 @@ const Inicio = () => {
       <Membresia />
       <Shop />
       <Footer />
+      <button onClick={logout}>Salir </button>
     </div>
 
   );
 };
 
 export default Inicio;
+
