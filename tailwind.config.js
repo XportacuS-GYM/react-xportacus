@@ -22,7 +22,7 @@ export default {
       colors: {
         mainColor: '#1046AA',
         hardColor: '#0F3172',
-        primary: "#23262F",
+        primary: "#010F28",
         accent: "#286F6C",
         grey: {
           DEFAULT: "#919297",

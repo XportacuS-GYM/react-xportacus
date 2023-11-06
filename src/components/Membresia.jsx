@@ -18,11 +18,11 @@ const Membresia = () => {
                     </div>
 
                     <div className="p-4 flex flex-col items-center">
-                        <img src={pesa} alt="pesa" className="w-[128px] h-[128px] object-cover rounded-lg" />
+                        <img src={pesa} alt="pesa" className="w-[128px] h-[128px] object-cover" />
                         <p className="mt-2 text-center ">Equipo de Calidad</p>
                     </div>
                     <div className="p-4 flex flex-col items-center">
-                        <img src={silbato} alt="silbato" className="w-[128px] h-[128px]  object-cover rounded-lg" />
+                        <img src={silbato} alt="silbato" className="w-[128px] h-[128px]  object-cover " />
                         <p className="mt-2 text-center ">Execelentes Coaches</p>
                     </div>
 

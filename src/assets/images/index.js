@@ -8,6 +8,11 @@ import pesa from './pesa.png'
 import silbato from './silbato.png'
 import cronometro from './cronometro.png'
 
+import logo from './logo.png'
+import footer from './footer.png'
+
+
+
 export { 
     gym1, 
     gym2, 
@@ -17,5 +22,11 @@ export {
     pesarusa,
     pesa,
     silbato,
-    cronometro
+    cronometro,
+
+    logo,
+    footer,
+
+
+
 }
