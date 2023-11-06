@@ -3,20 +3,128 @@ import React, { useState } from "react";
 const data = [
   {
     nombre: 'Juan segoviano',
+    direccion: 'Colina de las aves 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
     direccion: 'Enrique segoviano 123',
     plan: 'Pro',
     email: 'taboada@kkino.com',
     expiracion: '2023-12-31',
     estatus: 'Activa',
   },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+  {
+    nombre: 'Juan segoviano',
+    direccion: 'Enrique segoviano 123',
+    plan: 'Pro',
+    email: 'taboada@kkino.com',
+    expiracion: '2023-12-31',
+    estatus: 'Activa',
+  },
+
 ];
-
-const usariosPorPagina = 10;
-
 
 
 export default function AdminMembers() {
-  return (
+
+  const usuariosPorPagina = 10;
+  const  [paginaActual, setPaginaActual] = useState(1);
+
+  const ultimoUsuario = paginaActual * usuariosPorPagina;
+  const primerUsuario = ultimoUsuario - usuariosPorPagina;
+  const miembrosActuales = data.slice(primerUsuario, ultimoUsuario);
+
+  const paginasTotales = Math.ceil(data.length / usuariosPorPagina);
+
+  const cambiarPagina = (nuevaPagina) => {
+      setPaginaActual(nuevaPagina);
+  };
+
+  return (    
     <>
     <div className="pl-[50px] py-[20px] flex space-x-[40em] ">
         <p className="text-[1.5em] ">Hola adm,</p>
@@ -101,32 +209,42 @@ export default function AdminMembers() {
         </div>
       </div>
 
-      <table className="min-w-full">
+      <table className="min-w-full ">
         <thead>
           <tr>
-            <th className="px-4 py-2">Nombre</th>
-            <th className="px-4 py-2">Dirección</th>
-            <th className="px-4 py-2">Plan</th>
-            <th className="px-4 py-2">Email</th>
-            <th className="px-4 py-2">Expiración</th>
-            <th className="px-4 py-2">Estatus de Membresía</th>
+            <th className="border-b px-4 py-2">Nombre</th>
+            <th className="border-b px-4 py-2">Dirección</th>
+            <th className="border-b px-4 py-2">Plan</th>
+            <th className="border-b px-4 py-2">Email</th>
+            <th className="border-b px-4 py-2">Expiración</th>
+            <th className="border-b px-4 py-2 ">Estatus de Membresía</th>
           </tr>
         </thead>
-        <tbody>
-          {data.map((row, index) => (
-            <tr key={index}>
-              <td className="border px-4 py-2">{row.nombre}</td>
-              <td className="border px-4 py-2">{row.direccion}</td>
-              <td className="border px-4 py-2">{row.plan}</td>
-              <td className="border px-4 py-2">{row.email}</td>
-              <td className="border px-4 py-2">{row.expiracion}</td>
-              <td className="border px-4 py-2">{row.estatus}</td>
+        <tbody className="" >
+          {miembrosActuales.map((row, index) => (
+            <tr key={index} >
+              <td className="border-b pl-[30px] pb-[15px] pt-[15px] ">{row.nombre}</td>
+              <td className="border-b pl-[30px]">{row.direccion}</td>
+              <td className="border-b pl-[30px]">{row.plan}</td>
+              <td className="border-b ">{row.email}</td>
+              <td className="border-b ">{row.expiracion}</td>
+              <td className="border-b ">{row.estatus}</td>
             </tr>
-            
+          
           ))}
         </tbody>
-
       </table>
+
+      <div className="mt-4">
+          {Array.from({ length: paginasTotales }).map((_, index) => (
+            <button key={index} 
+            className={`mx-2 px-2 py-1 rounded ${paginaActual === index + 1 ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
+            onClick={() => cambiarPagina(index + 1)}
+            >
+              {index+1}
+            </button>
+          ))}
+        </div>
 
     </div>
     </>
