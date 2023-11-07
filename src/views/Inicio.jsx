@@ -5,6 +5,7 @@ import Membresia from '../components/Membresia';
 import Shop from '../components/Shop';
 import Pie from '../components/Pie';
 import Header from '../components/Header';
+import { useAuth } from '../hooks/useAuth';
 
 const Inicio = () => {
 
