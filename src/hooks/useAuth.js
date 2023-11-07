@@ -62,7 +62,7 @@ export const useAuth = ({middleware, url}) => {
             navigate(url)
         }
         if(middleware === 'auth' && error){
-            navigate('/auth/login')
+           // navigate('/auth/login')
         }
     }, [user,error])
 
