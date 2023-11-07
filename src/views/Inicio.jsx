@@ -1,9 +1,10 @@
+import React from 'react';
 import Hero from '../components/Hero';
 import Rutinas from '../components/Rutinas';
 import Membresia from '../components/Membresia';
 import Shop from '../components/Shop';
-import Footer from '../components/Footer';
-import { useAuth } from '../hooks/useAuth';
+import Pie from '../components/Pie';
+import Header from '../components/Header';
 
 const Inicio = () => {
 
@@ -12,11 +13,12 @@ const Inicio = () => {
   return (
     //LA PAG PRINCIPAL
     <div className='w-full max-w-[1440px] mx-auto bg-white'>
+      <Header />
       <Hero />
       <Rutinas />
       <Membresia />
       <Shop />
-      <Footer />
+      <Pie />
     </div>
 
   );

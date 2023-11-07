@@ -63,6 +63,8 @@ export const useAuth = ({middleware, url}) => {
         }
         if(middleware === 'auth' && error){
            // navigate('/auth/login')
+
+
         }
     }, [user,error])
 
