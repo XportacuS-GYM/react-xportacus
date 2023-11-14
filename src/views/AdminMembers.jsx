@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const data = [
   {
@@ -98,7 +98,7 @@ const data = [
     estatus: 'Activa',
   },
   {
-    nombre: 'Juan segoviano',
+    nombre: 'Pedro segoviano',
     direccion: 'Enrique segoviano 123',
     plan: 'Pro',
     email: 'taboada@kkino.com',
@@ -110,7 +110,8 @@ const data = [
 
 
 export default function AdminMembers() {
-
+  
+  //FUNCION PARA MOSTRAR A LOS USUARIOS
   const usuariosPorPagina = 10;
   const  [paginaActual, setPaginaActual] = useState(1);
 
@@ -123,6 +124,25 @@ export default function AdminMembers() {
   const cambiarPagina = (nuevaPagina) => {
       setPaginaActual(nuevaPagina);
   };
+
+  //FUNCION PARA LA BUSQUEDA DE USUARIOS 
+  
+    const[users, setUsers ] = useState([])
+    const[search, setSearch ] = useState("")
+
+    const searcher = (e) =>{
+      setSearch(e.target.value)
+      console.log(e.target)
+    }
+
+    let results = []
+    if(!search){
+      results = miembrosActuales
+    }else{
+      results = miembrosActuales.filter( (dato) => 
+      dato.nombre.toLowerCase().includes(search.toLocaleLowerCase())
+      )
+    }
 
   return (    
     <>
@@ -195,7 +215,7 @@ export default function AdminMembers() {
 
         <div className="pl-[40px] flex items-center" >
           <div className="relative ">
-            <input type="search" name="" id="" placeholder="Buscar Miembros" className="bg-slate-50 pl-[30px] rounded-[10px] border w-[216px] h-[38px]"/>
+            <input value={search} onChange={searcher} type="search" name="" id="" placeholder="Buscar Miembros" className="appearance-none bg-slate-50 pl-[30px] rounded-[10px] border w-[216px] h-[38px]"/>
             <div className="absolute inset-y-0 left-0 flex items-center pl-[5px] pointer-events-none">
               <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#7E7E7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21L16.65 16.65" stroke="#7E7E7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
@@ -209,33 +229,33 @@ export default function AdminMembers() {
         </div>
       </div>
 
-      <table className="min-w-full ">
+      <table className="min-w-full text-left">
         <thead>
           <tr>
             <th className="border-b px-4 py-2">Nombre</th>
-            <th className="border-b px-4 py-2">Dirección</th>
-            <th className="border-b px-4 py-2">Plan</th>
-            <th className="border-b px-4 py-2">Email</th>
-            <th className="border-b px-4 py-2">Expiración</th>
-            <th className="border-b px-4 py-2 ">Estatus de Membresía</th>
+            <th className="border-b ">Dirección</th>
+            <th className="border-b ">Plan</th>
+            <th className="border-b ">Email</th>
+            <th className="border-b ">Expiración</th>
+            <th className="border-b ">Estatus de Membresía</th>
           </tr>
         </thead>
         <tbody className="" >
-          {miembrosActuales.map((row, index) => (
+          {results.map((row, index) => (
             <tr key={index} >
-              <td className="border-b pl-[30px] pb-[15px] pt-[15px] ">{row.nombre}</td>
-              <td className="border-b pl-[30px]">{row.direccion}</td>
-              <td className="border-b pl-[30px]">{row.plan}</td>
+              <td className="border-b px-4 pb-[15px] pt-[15px] ">{row.nombre}</td>
+              <td className="border-b ">{row.direccion}</td>
+              <td className="border-b ">{row.plan}</td>
               <td className="border-b ">{row.email}</td>
               <td className="border-b ">{row.expiracion}</td>
-              <td className="border-b ">{row.estatus}</td>
+              <td className="border-b text-center ">{row.estatus}</td>
             </tr>
           
           ))}
         </tbody>
       </table>
 
-      <div className="mt-4">
+      <div className="">
           {Array.from({ length: paginasTotales }).map((_, index) => (
             <button key={index} 
             className={`mx-2 px-2 py-1 rounded ${paginaActual === index + 1 ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
