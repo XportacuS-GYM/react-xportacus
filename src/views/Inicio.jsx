@@ -12,7 +12,7 @@ const Inicio = () => {
   const {logout} = useAuth({middleware: 'auth'});
 
   return (
-    //LA PAG PRINCIPAL
+    
     <div className='w-full max-w-[1440px] mx-auto bg-white'>
       <Header />
       <Hero />

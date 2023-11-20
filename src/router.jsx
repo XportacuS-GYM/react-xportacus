@@ -7,6 +7,9 @@ import Registro from './views/Registro'
 import AdminDashboard from './views/AdminDashboard'
 import LayoutAdmin from './layouts/LayoutAdmin'
 import AdminMembers from './views/AdminMembers'
+import TiendaLayout from './layouts/TiendaLayout'
+import Tienda from './views/Tienda'
+import { Carrito } from './views/Carrito'
 
 const router = createBrowserRouter([
     {
@@ -16,7 +19,7 @@ const router = createBrowserRouter([
             {
                 index:true,
                 element: <Inicio />
-            }
+            },
         ]
     },
     {
@@ -45,11 +48,23 @@ const router = createBrowserRouter([
                 path: '/admin/AdminMembers',
                 element: <AdminMembers />
             },
-            
+        ] 
+    },
+    ,
+    {
+        path: '/tienda',
+        element: <TiendaLayout/>,
+        children:[
+            {
+                index:true,
+                element: <Tienda/>
+            },
+            {
+                path: '/tienda/Carrito',
+                element: <Carrito />
+            }
         ]
     }
-
-    //ESTA MADRE ES DE LAS VENTANAS, LAS RUTAS 
 ])
 
 export default router
