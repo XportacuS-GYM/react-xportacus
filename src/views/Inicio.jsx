@@ -5,8 +5,12 @@ import Membresia from '../components/Membresia';
 import Shop from '../components/Shop';
 import Pie from '../components/Pie';
 import Header from '../components/Header';
+import { useAuth } from '../hooks/useAuth';
 
 const Inicio = () => {
+
+  const {logout} = useAuth({middleware: 'auth'});
+
   return (
     //LA PAG PRINCIPAL
     <div className='w-full max-w-[1440px] mx-auto bg-white'>
