@@ -49,7 +49,7 @@ export const Tarjeta = () => {
                 <form action="" className='pt-[20px]'> 
                     <div className='p-[10px] flex flex-col border'>
                         <label >Numero</label>
-                        <input className='border-[2px] ' type="Number" name='number'id='number' maxLength="16" onChange={handleInputChange} onFocus={handleFocusChange}/>
+                        <input className='appearance-none border-[2px]' type="Number" name='number'id='number' maxLength="16" onChange={handleInputChange} onFocus={handleFocusChange}/>
                     </div>
                     <div className='p-[10px] flex flex-col border'>
                         <label >Nombre</label>
