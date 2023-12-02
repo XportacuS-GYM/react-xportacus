@@ -8,7 +8,7 @@ export const Product = (props) => {
     const cartItemsAmount = cartItems[id]
 
   return (
-    <div className='w-[300px] h-[350px] m-[100px] rounded-[15px] flex flex-col justify-center items-center '>
+    <div className=' w-[300px] h-[350px] m-[100px] rounded-[15px] flex flex-col justify-center items-center '>
         <img src={image} alt="" className='w-[200px] h-[300px]'/>
         <div className='text-center'>
             <p className='font-medium'>{name}</p>

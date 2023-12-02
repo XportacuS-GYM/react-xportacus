@@ -10,6 +10,8 @@ import AdminMembers from './views/AdminMembers'
 import TiendaLayout from './layouts/TiendaLayout'
 import Tienda from './views/Tienda'
 import { Carrito } from './views/Carrito'
+import PagosLayout from './layouts/PagosLayout'
+import Pagos from './views/Pagos'
 
 const router = createBrowserRouter([
     {
@@ -63,6 +65,16 @@ const router = createBrowserRouter([
                 path: '/tienda/Carrito',
                 element: <Carrito />
             }
+        ]
+    },
+    {
+        path: '/Pagos',
+        element: <PagosLayout/>,
+        children:[
+            {
+                index:true,
+                element: <Pagos/>
+            },
         ]
     }
 ])

@@ -29,14 +29,14 @@ export default function AdminDashboard() {
 
   return (
     <div className="">
-        <p className="py-[10px] ml-[50px] text-[1.5em]">Hola fulano,</p>
+        <p className="py-[10px] ml-[50px] text-[1.5em]">Hola adm,</p>
 
         <div className="w-[968px] h-[812px] ml-[50px] rounded-[2em] bg-white">
 
           <div className="pt-[20px] pl-[20px]  border-b-2 grid grid-cols-2 ">
             <div className="pl-[20px] pb-[10px]">
                <p className="font-bold text-[1.5em]">Membresia de gym XportacuS</p>
-               <p className="mt-[10px] text-teal-500">Membresia Activa</p> {/* Como hacer para actualizar el estado*/}
+               <p className="mt-[10px] text-teal-500">Membresia Activa</p>
             </div>
 
             <div className="flex items-center">
