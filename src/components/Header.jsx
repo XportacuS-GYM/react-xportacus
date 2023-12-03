@@ -52,11 +52,11 @@ const Header = () => {
                             })}
                             {inicioSesion ? (<div className='capitalize text-white hover:border-b transition-all font-poppins font-medium' >
                                 <p>Bienvenido, {nombreUsuario}.</p>  
-                                <button onClick={handleLogout}>Cerrar Sesión</button>
+                                <a onClick={handleLogout}>Cerrar Sesión</a>
                                 </div>):
                                  (<div className='capitalize text-white transition-all font-poppins font-medium '>
-                                    <button onClick={handleLogin} className='mr-[10px] hover:border-b'>Iniciar Sesion</button>
-                                    <button className='hover:border-b'> Registrarse </button>
+                                    <a href='' onClick={handleLogin} className='mr-[10px] hover:border-b'>Iniciar Sesion</a>
+                                    <a href='/auth/Registro' className='hover:border-b'> Registrarse </a>
                                  </div> )
                             } 
                         </ul>

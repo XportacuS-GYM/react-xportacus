@@ -47,25 +47,28 @@ export const Tarjeta = () => {
                 />
 
                 <form action="" className='pt-[20px]'> 
-                    <div className='p-[10px] flex flex-col border'>
+                    <div className='p-[10px] flex flex-col'>
                         <label >Numero</label>
-                        <input className='appearance-none border-[2px]' type="Number" name='number'id='number' maxLength="16" onChange={handleInputChange} onFocus={handleFocusChange}/>
+                        <input className='appearance-none border-[2px]' type="Number" name='number'id='number' maxlength="19" onChange={handleInputChange} onFocus={handleFocusChange}/>
                     </div>
-                    <div className='p-[10px] flex flex-col border'>
+                    <div className='p-[10px] flex flex-col'>
                         <label >Nombre</label>
                         <input className='border-[2px]' type="text" name='name'id='name' onChange={handleInputChange} onFocus={handleFocusChange}/>
                     </div>
-                    <div className='p-[10px] flex flex-col border'>
-                        <label >Expriacion</label>
-                        <input className='border-[2px]' type="text" name='expiry'id='expiry' onChange={handleInputChange} onFocus={handleFocusChange}/>
+                    <div className='flex gap-x-10'>
+                        <div className='p-[10px] flex flex-col w-[100px]'>
+                            <label >Expriacion</label>
+                            <input className='border-[2px]' type="text" name='expiry'id='expiry' onChange={handleInputChange} onFocus={handleFocusChange}/>
+                        </div>
+                        <div className='p-[10px] flex flex-col'>
+                            <label>ccv</label>
+                            <input className='border-[2px] w-[100px]' type="text" name='cvc'id='cvc' onChange={handleInputChange} onFocus={handleFocusChange}/>
+                        </div>
                     </div>
-                    <div className='p-[10px] flex flex-col border'>
-                        <label>ccv</label>
-                        <input className='border-[2px]' type="text" name='cvc'id='cvc' onChange={handleInputChange} onFocus={handleFocusChange}/>
-                    </div>
+                    
                 </form>
 
-                <button onClick={procesarPago} type='button' className='bg- w-[150px] h-[40px] border' >Pagar</button>
+                <button onClick={procesarPago} type='button' className='bg-slate-800 text-white w-[200px] h-[40px] ml-[10px] rounded-[5px] hover:bg-sky-800' >Pagar</button>
             </div>
             
         </div>
