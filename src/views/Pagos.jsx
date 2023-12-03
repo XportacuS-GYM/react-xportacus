@@ -27,9 +27,9 @@ export default function Pagos() {
                 <Tarjeta />
             </div>
 
-            <div className='bg-gray-300 max-w-[300px] max-h-[300px] mt-[60px] p-[20px] rounded-[7px]'>
+            <div className='bg-gray-300 max-w-[300px] max-h-[300px] mt-[80px] p-[20px] rounded-[7px]'>
 
-                <div className='w-full '>
+                <div className='w-full'>
                     <h2 className='text-[1.125em] '>
                         <span>Detalle de la suscripción</span>
                     </h2>
@@ -41,10 +41,10 @@ export default function Pagos() {
                     <hr/>
                     <div className='my-[0.75em] flex '>
                         <span>Total a pagar</span>
-                        <span>$99</span>
+                        <span className='ml-[10px]'>$99</span>
                         <span className='text-[.625em] mr-0' >00</span>
                     </div>
-                    <button className='bg-slate-800 text-white w-[200px] h-[40px] rounded-[5px] hover:bg-sky-800'>Pagar Suscripción</button>
+                    <button className='bg-slate-800 text-white w-[200px] h-[40px] rounded-[5px] hover:bg-sky-800 mt-[10px] ml-[25px]'>Pagar Suscripción</button>
                     <p className='text-[0.75em] text-center'>La suscripción la puedes cancelar en el momento que quieras.</p>
                 </div>
             </div>

@@ -49,20 +49,20 @@ export const Tarjeta = () => {
                 <form action="" className='pt-[20px]'> 
                     <div className='p-[10px] flex flex-col'>
                         <label >Numero</label>
-                        <input className='appearance-none border-[2px]' type="Number" name='number'id='number' maxlength="19" onChange={handleInputChange} onFocus={handleFocusChange}/>
+                        <input className='appearance-none border-[2px]' type="text" name='number'id='number' maxlength="16" onChange={handleInputChange} onFocus={handleFocusChange}/>
                     </div>
                     <div className='p-[10px] flex flex-col'>
                         <label >Nombre</label>
-                        <input className='border-[2px]' type="text" name='name'id='name' onChange={handleInputChange} onFocus={handleFocusChange}/>
+                        <input className='border-[2px]' type="text" name='name'id='name' maxlength="30" onChange={handleInputChange} onFocus={handleFocusChange}/>
                     </div>
                     <div className='flex gap-x-10'>
                         <div className='p-[10px] flex flex-col w-[100px]'>
                             <label >Expriacion</label>
-                            <input className='border-[2px]' type="text" name='expiry'id='expiry' onChange={handleInputChange} onFocus={handleFocusChange}/>
+                            <input className='border-[2px]' type="text" name='expiry'id='expiry' maxlength="4" onChange={handleInputChange} onFocus={handleFocusChange}/>
                         </div>
                         <div className='p-[10px] flex flex-col'>
                             <label>ccv</label>
-                            <input className='border-[2px] w-[100px]' type="text" name='cvc'id='cvc' onChange={handleInputChange} onFocus={handleFocusChange}/>
+                            <input className='border-[2px] w-[100px]' type="text" name='cvc'id='cvc' maxlength="4" onChange={handleInputChange} onFocus={handleFocusChange}/>
                         </div>
                     </div>
                     
