@@ -22,7 +22,7 @@ const Header = () => {
         // Realiza lógica de cierre de sesión aquí
         // Por ahora, simplemente simulamos que cerramos sesión
         setInicioSesion(false);
-        setNombrrUsuario('');
+        setNombreUsuario('');
       };
     
     useEffect(() => {
@@ -55,8 +55,12 @@ const Header = () => {
                                 <a onClick={handleLogout}>Cerrar Sesión</a>
                                 </div>):
                                  (<div className='capitalize text-white transition-all font-poppins font-medium '>
-                                    <a href='' onClick={handleLogin} className='mr-[10px] hover:border-b'>Iniciar Sesion</a>
-                                    <a href='/auth/Registro' className='hover:border-b'> Registrarse </a>
+                                    <a href="/auth/Login">
+                                    <button onClick={handleLogin} className='mr-[10px] hover:border-b'>Iniciar Sesion</button>
+                                    </a>
+                                    <a href="/auth/Registro">
+                                    <button className='hover:border-b'> Registrarse </button>
+                                    </a>
                                  </div> )
                             } 
                         </ul>
