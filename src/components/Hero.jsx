@@ -18,7 +18,9 @@ const Hero = () => {
           <span className="text-white">shop</span>
           <span>.</span>
         </h3>
+        <a href="/Pagos">
         <button className='bg-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.5)] px-[35px] py-[9px] mb-[160px] lg:mb-[50px] text-xl rounded-[23px] backdrop:blur-md text-hardColor font-primary font-medium transition-all'>Obtener Membresia</button>
+        </a>
 
         <div>
           <Servicios />
