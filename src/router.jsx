@@ -12,6 +12,7 @@ import Tienda from './views/Tienda'
 import { Carrito } from './views/Carrito'
 import PagosLayout from './layouts/PagosLayout'
 import Pagos from './views/Pagos'
+import { PagoCarrito } from './components/PagoCarrito'
 
 const router = createBrowserRouter([
     {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
             {
                 path: '/tienda/Carrito',
                 element: <Carrito />
+            }
+            ,{
+                path: '/tienda/PagoCarrito',
+                element: <PagoCarrito/>
             }
         ]
     },

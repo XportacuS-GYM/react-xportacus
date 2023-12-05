@@ -3,6 +3,8 @@ import { logo } from '../assets/images'
 import { CgMenuRight, CgClose } from 'react-icons/cg';
 import { navigation } from '../data';
 import NavMobile from './NavMobile';
+import { useNavigate} from 'react-router-dom'
+import { useAuth } from '../hooks/useAuth';
 
 
 const Header = () => {
@@ -11,11 +13,16 @@ const Header = () => {
     const [inicioSesion, setInicioSesion] = useState(false);
     const [nombreUsuario, setNombreUsuario] = useState('');
 
+    const { logout, user } = useAuth({middleware: 'auth'});
+
+
     const handleLogin= () => {
         // Realiza lógica de autenticación aquí
-        // Por ahora, solo simulamos que el inicio de sesión es exitoso
+        // Por ahora, solo simulamos que el inicio de sesión es exitos
+        
+        window.location.href = '/auth/Login';
         setInicioSesion(true);
-        setNombreUsuario('Juanito'); // Puedes obtener el nombre de usuario de tu lógica de autenticación
+        setNombreUsuario(user); // Puedes obtener el nombre de usuario de tu lógica de autenticación
       };
       
       const handleLogout = () => {
@@ -55,9 +62,9 @@ const Header = () => {
                                 <a onClick={handleLogout}>Cerrar Sesión</a>
                                 </div>):
                                  (<div className='capitalize text-white transition-all font-poppins font-medium '>
-                                    <a href="/auth/Login">
+                                    
                                     <button onClick={handleLogin} className='mr-[10px] hover:border-b'>Iniciar Sesion</button>
-                                    </a>
+                                    
                                     <a href="/auth/Registro">
                                     <button className='hover:border-b'> Registrarse </button>
                                     </a>
