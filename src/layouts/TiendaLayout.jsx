@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import { ShopContextProvider } from '../context/shop-context'
-import NavbarCarrito from '../components/navbarCarrito'
+import NavbarCarrito from '../components/NavbarCarrito'
 import Pie from '../components/Pie'
 import Header from '../components/Header'
 

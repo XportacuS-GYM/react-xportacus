@@ -55,7 +55,7 @@ const Header = () => {
                                 <a onClick={handleLogout}>Cerrar Sesión</a>
                                 </div>):
                                  (<div className='capitalize text-white transition-all font-poppins font-medium '>
-                                    <a href="/auth/Login">
+                                    <a href="">
                                     <button onClick={handleLogin} className='mr-[10px] hover:border-b'>Iniciar Sesion</button>
                                     </a>
                                     <a href="/auth/Registro">

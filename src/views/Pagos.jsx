@@ -35,13 +35,13 @@ export default function Pagos() {
                     </h2>
                     <div className='mb-[0.75em] flex'>
                         <span>Suscripcion mensual a XportacuS</span>
-                        <span>$99</span>
+                        <span>$500</span>
                         <span className='text-[.625em] mr-0'>00</span>
                     </div>
                     <hr/>
                     <div className='my-[0.75em] flex '>
                         <span>Total a pagar</span>
-                        <span className='ml-[10px]'>$99</span>
+                        <span className='ml-[10px]'>$500</span>
                         <span className='text-[.625em] mr-0' >00</span>
                     </div>
                     <button className='bg-slate-800 text-white w-[200px] h-[40px] rounded-[5px] hover:bg-sky-800 mt-[10px] ml-[25px]'>Pagar Suscripción</button>
