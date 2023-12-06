@@ -9,7 +9,6 @@ import AlertaValidacion from './AlertaValidacion';
 
 export const PagoCarrito = () => {
 
-    
     const {cartItems,getTotalCartAmount} = useContext(ShopContext);
     const totalAmount = getTotalCartAmount();
 

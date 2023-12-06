@@ -18,7 +18,6 @@ const Inicio = () => {
       <Hero />
       <Rutinas />
       <Membresia />
-      <Shop />
       <Pie />
     </div>
 

@@ -23,6 +23,8 @@ export const ShopContextProvider = (props) => {
                 totalAmount += cartItems[item] * itemInfo.price 
             }
         }
+        localStorage.setItem('Carrito', cartItems);
+        localStorage.setItem('Total', totalAmount);
         return totalAmount;
     }
 

@@ -27,10 +27,6 @@ const Rutinas = () => {
                             <img src={gym3} alt="" />
 
                         </div>
-                        <div className='flex items-center justify-center mt-10'>
-                            <button type="button" className='bg-[#FFE000] uppercase px-[35px] py-[9px] text-[20px] rounded-[38px] font-poppins font-medium'>Ver Mas Clases</button>
-                        </div>
-
                     </div>
                 </div>
             </div>

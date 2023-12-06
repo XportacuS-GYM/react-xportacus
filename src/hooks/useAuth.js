@@ -6,8 +6,7 @@ import useSWR from "swr";
 import clienteAxios from "../config/axios";
 
 export const useAuth = ({middleware, url}) => {
-    
-    const [miembro, setMiembro] = useState(null);
+
 
     const token = localStorage.getItem('AUTH_TOKEN')
      const navigate = useNavigate()
@@ -24,7 +23,7 @@ export const useAuth = ({middleware, url}) => {
         })
     )
 
-    const login = async (datos, setErrores,setMiembro,mutate) => {
+    const login = async (datos, setErrores) => {
         try {
             const {data} = await clienteAxios.post('/api/login', datos);
             localStorage.setItem('AUTH_TOKEN', data.token);
@@ -71,7 +70,6 @@ export const useAuth = ({middleware, url}) => {
     }, [user,error])
 
     return {
-        miembro,
         login,
         registro,
         logout,

@@ -8,6 +8,7 @@ export const Carrito = () => {
     const {cartItems,getTotalCartAmount} = useContext(ShopContext);
     const totalAmount = getTotalCartAmount();
 
+    
     const navigate = useNavigate()
 
   return (
