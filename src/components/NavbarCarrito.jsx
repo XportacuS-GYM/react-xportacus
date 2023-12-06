@@ -8,7 +8,7 @@ export default function NavbarCarrito() {
   return (
     <div>
       
-      <nav className=" w-full h-[90px] mx-auto bg-primary flex items-center justify-end text-white ">
+      <nav className=" w-full h-[90px] mx-auto bg-[#06132B] flex items-center justify-end text-white ">
         <a href="" className="mr-[620px]">
             <img src={logo} alt="logo" className="h-6 lg:h-8" />
         </a>

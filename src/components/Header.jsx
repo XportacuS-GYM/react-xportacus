@@ -17,17 +17,15 @@ const Header = () => {
 
 
     const handleLogin= () => {
-        // Realiza lógica de autenticación aquí
-        // Por ahora, solo simulamos que el inicio de sesión es exitos
+        
         
         window.location.href = '/auth/Login';
         setInicioSesion(true);
-        setNombreUsuario(user); // Puedes obtener el nombre de usuario de tu lógica de autenticación
+        setNombreUsuario(user);
       };
       
       const handleLogout = () => {
-        // Realiza lógica de cierre de sesión aquí
-        // Por ahora, simplemente simulamos que cerramos sesión
+        
         setInicioSesion(false);
         setNombreUsuario('');
       };
@@ -38,7 +36,7 @@ const Header = () => {
         })
     })
     return (
-        <header className={`${bg ? 'bg-primary py-4 lg:py-6' : 'bg-none'} fixed left-0 w-full py-8 z-10 translate-all duration-200`}>
+        <header className={`${bg ? 'bg-[#06132B] py-4 lg:py-6' : 'bg-none'} fixed left-0 w-full py-8 z-10 translate-all duration-200`}>
             <div className='container mx-auto'>
                 <div className='flex justify-between items-center'>
                     <a href="#">
