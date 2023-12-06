@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Cards from 'react-credit-cards-2';
 import 'react-credit-cards-2/dist/es/styles-compiled.css';
+import AlertaValidacion from './AlertaValidacion';
 
 export const Tarjeta = () => {
     
@@ -32,6 +33,8 @@ export const Tarjeta = () => {
         console.log("expiry =>", state.expiry)
         console.log("cvc =>", state.cvc)
         console.log(JSON.stringify(state))
+
+        alert('Pago validado con exito');
     }
 
   return (
@@ -67,12 +70,9 @@ export const Tarjeta = () => {
                     </div>
                     
                 </form>
-
-                <button onClick={procesarPago} type='button' className='bg-slate-800 text-white w-[200px] h-[40px] ml-[10px] rounded-[5px] hover:bg-sky-800' >Pagar</button>
             </div>
             
         </div>
-        
 
     </div>
   )

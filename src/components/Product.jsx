@@ -17,7 +17,7 @@ export const Product = (props) => {
                 <p className='text-[1em] text-grey line-through'>${oldPrice}MXN</p>
             </div>
         </div>
-        <button className='border-[2px] border-primary bg-primary text-white px-[10px] py-[5px] rounded-[15px] hover:bg-'
+        <button className='border-[2px] border-[#06132B] bg-[#06132B] text-white px-[10px] py-[5px] rounded-[15px] hover:bg-[#06B]'
         onClick={() => addToCart(id)}>
             Añadir a carrito {cartItemsAmount > 0 && <>({cartItemsAmount}) </> }
         </button>

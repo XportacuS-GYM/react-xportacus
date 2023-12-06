@@ -4,6 +4,8 @@ import { ShopContext } from '../context/shop-context';
 import { ItemCarrito } from '../components/ItemCarrito';
 import { useNavigate} from 'react-router-dom'
 import { Tarjeta } from './Tarjeta';
+import AlertaValidacion from './AlertaValidacion';
+
 
 export const PagoCarrito = () => {
 
@@ -42,8 +44,11 @@ export const PagoCarrito = () => {
                 <p className='font-medium ml-[10px]'>${totalAmount}</p>
                 <span className='text-[.625em] mr-0' >00</span>
             </div>
-            <button className='bg-slate-800 text-white w-[200px] h-[40px] rounded-[5px] hover:bg-sky-800 mt-[10px] ml-[25px]'>Pagar</button>
-            <button onClick={()=> navigate("/tienda/carrito") } className='bg-slate-800 text-white w-[200px] h-[40px] rounded-[5px] hover:bg-sky-800 mt-[10px] ml-[25px]'>Regresar</button>
+            <div className='flex items-center flex-col'>
+                <AlertaValidacion />  
+                <button onClick={()=> navigate("/tienda/carrito") } className='bg-slate-800 text-white w-[200px] h-[40px] rounded-[5px] hover:bg-sky-800 mt-[10px] ml-[25px]'>Regresar</button>
+            </div>
+                
             </div>
         </div>
         </div>
