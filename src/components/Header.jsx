@@ -11,7 +11,7 @@ const Header = () => {
     const [bg, setBg] = useState(false);
     const [mobileNav, setMobileNav] = useState(false);
     const [inicioSesion, setInicioSesion] = useState(false);
-    const [nombreUsuario, setNombreUsuario] = useState('');
+    const [nombreUsuario, setNombreUsuario] = useState(false);
 
     const { logout, user } = useAuth({middleware: 'auth'});
 
@@ -19,10 +19,11 @@ const Header = () => {
     const handleLogin= () => {
         // Realiza lógica de autenticación aquí
         // Por ahora, solo simulamos que el inicio de sesión es exitos
-        
-        window.location.href = '/auth/Login';
-        setInicioSesion(true);
-        setNombreUsuario(user); // Puedes obtener el nombre de usuario de tu lógica de autenticación
+        if(user != null){
+          setInicioSesion(true);
+          setNombreUsuario(user?.name);
+        }
+          // Puedes obtener el nombre de usuario de tu lógica de autenticación
       };
       
       const handleLogout = () => {
@@ -57,14 +58,16 @@ const Header = () => {
                                     </a>  
                                 </li>
                             })}
-                            {inicioSesion ? (<div className='capitalize text-white hover:border-b transition-all font-poppins font-medium' >
+                            {nombreUsuario ? (<div className='capitalize text-white hover:border-b transition-all font-poppins font-medium' >
                                 <p>Bienvenido, {nombreUsuario}.</p>  
                                 <a onClick={handleLogout}>Cerrar Sesión</a>
                                 </div>):
                                  (<div className='capitalize text-white transition-all font-poppins font-medium '>
                                     
-                                    <button onClick={handleLogin} className='mr-[10px] hover:border-b'>Iniciar Sesion</button>
-                                    
+                                    <a href="/auth/Login">
+                                    <button className='mr-[10px] hover:border-b'>Iniciar Sesion</button>
+                                    </a>
+
                                     <a href="/auth/Registro">
                                     <button className='hover:border-b'> Registrarse </button>
                                     </a>

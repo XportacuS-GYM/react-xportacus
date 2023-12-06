@@ -11,8 +11,8 @@ export default function Login() {
     const {login} = useAuth({
         middleware: 'guest',
         url: '/'
-    })
-
+    }) 
+ 
     const handleSubmit = async e => {
         e.preventDefault();
 
