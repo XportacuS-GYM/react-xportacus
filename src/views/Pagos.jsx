@@ -2,9 +2,22 @@ import React from 'react'
 import { Tarjeta } from '../components/Tarjeta'
 import { logo } from '../assets/images'
 import AlertaValidacion from '../components/AlertaValidacion'
-
+import { Link } from 'react-router-dom'
+import { createRef, useState } from 'react'
+import { usePagoMembresia } from '../hooks/usePagoMembresia'
 
 export default function Pagos() {
+
+    const {pagoMembresia} = usePagoMembresia({
+        middleware: 'auth'
+    })
+
+    const handleSubmit = async e => {
+        e.preventDefault();
+
+        pagoMembresia()
+    }
+
   return (
     <div>
         <header className='w-full h-[90px] mx-auto bg-[#06132B] flex items-center text-white '>
@@ -46,7 +59,13 @@ export default function Pagos() {
                         <span className='ml-[10px]'>$500</span>
                         <span className='text-[.625em] mr-0' >00</span>
                     </div>
+
                     <AlertaValidacion />
+
+                    <form onSubmit={handleSubmit} noValidate>
+                      <button className='bg-slate-800 text-white w-[200px] h-[40px] rounded-[5px] hover:bg-sky-800 mt-[10px] ml-[25px]'>Pagar Suscripción</button>
+                    </form>
+
                     <p className='text-[0.75em] text-center'>La suscripción la puedes cancelar en el momento que quieras.</p>
                 </div>
             </div>
