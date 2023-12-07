@@ -13,6 +13,7 @@ export default function Registro() {
     const passwordRef = createRef();
     const passwordConfirmationRef = createRef();
 
+
     const [errores, setErrores] = useState([]);
     const {registro} = useAuth({middleware: 'guest', url: '/'})
 
@@ -26,7 +27,8 @@ export default function Registro() {
             address: addressRef.current.value,
             email: emailRef.current.value,
             password: passwordRef.current.value,
-            password_confirmation : passwordConfirmationRef.current.value
+            password_confirmation : passwordConfirmationRef.current.value,
+
         }
         
         registro(datos, setErrores)
